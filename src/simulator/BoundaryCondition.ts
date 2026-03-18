@@ -1,0 +1,1 @@
+export { rasterizeObjects } from './ObjectSampler';

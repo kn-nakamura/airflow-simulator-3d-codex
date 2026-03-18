@@ -1,0 +1,1 @@
+{"name":"cylinder_array","objects":[{"id":"cyl-1","type":"cylinder","position":[-2,1,0],"rotation":[0,0,0],"scale":[1,2,1],"roughness":0.5},{"id":"cyl-2","type":"cylinder","position":[2,1,0],"rotation":[0,0,0],"scale":[1,2,1],"roughness":0.5}]}
