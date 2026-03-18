@@ -1,6 +1,6 @@
 import { useSimulatorStore } from '../../store/simulatorStore';
 
-export const WindPanel = (): JSX.Element => {
+export const WindPanel = () => {
   const { wind, setWind } = useSimulatorStore((s) => s);
 
   return (

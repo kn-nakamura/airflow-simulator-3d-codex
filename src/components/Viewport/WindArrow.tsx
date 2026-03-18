@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { Vector3 } from 'three';
 import { useSimulatorStore } from '../../store/simulatorStore';
 
-export const WindArrow = (): JSX.Element => {
+export const WindArrow = () => {
   const wind = useSimulatorStore((s) => s.wind);
   const direction = useMemo(() => {
     const rad = (wind.azimuth * Math.PI) / 180;

@@ -3,7 +3,7 @@ import { useMemo, useState } from 'react';
 import type { Mesh } from 'three';
 import { useObjectStore } from '../../store/objectStore';
 
-const objectGeometry = (type: string): JSX.Element => {
+const objectGeometry = (type: string) => {
   switch (type) {
     case 'sphere':
       return <sphereGeometry args={[0.75, 24, 24]} />;
@@ -18,7 +18,7 @@ const objectGeometry = (type: string): JSX.Element => {
   }
 };
 
-export const SceneObjects = (): JSX.Element => {
+export const SceneObjects = () => {
   const { objects, selectedIds, select, updateObject } = useObjectStore((s) => s);
   const selected = useMemo(() => objects.find((o) => o.id === selectedIds[0]), [objects, selectedIds]);
   const [mode, setMode] = useState<'translate' | 'rotate' | 'scale'>('translate');
@@ -45,7 +45,8 @@ export const SceneObjects = (): JSX.Element => {
           mode={mode}
           position={selected.position}
           onObjectChange={(event) => {
-            const mesh = event.target.object as Mesh;
+            const mesh = (event as { target?: { object?: Mesh } } | undefined)?.target?.object;
+            if (!mesh) return;
             updateObject(selected.id, {
               position: [mesh.position.x, mesh.position.y, mesh.position.z],
               rotation: [mesh.rotation.x, mesh.rotation.y, mesh.rotation.z],

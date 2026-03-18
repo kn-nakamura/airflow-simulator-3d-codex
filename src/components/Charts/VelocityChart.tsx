@@ -1,7 +1,7 @@
 import { Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { useSimulatorStore } from '../../store/simulatorStore';
 
-export const VelocityChart = (): JSX.Element => {
+export const VelocityChart = () => {
   const frame = useSimulatorStore((s) => s.solverFrame);
   const size = frame?.size ?? 0;
   const mid = Math.floor(size / 2);

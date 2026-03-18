@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { DataTexture, FloatType, RGBAFormat } from 'three';
 import { useSimulatorStore } from '../../store/simulatorStore';
 
-export const VelocityHeatmap = (): JSX.Element => {
+export const VelocityHeatmap = () => {
   const frame = useSimulatorStore((s) => s.solverFrame);
   const texture = useMemo(() => {
     if (!frame) return null;

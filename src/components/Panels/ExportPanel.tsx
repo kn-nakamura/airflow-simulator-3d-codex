@@ -1,7 +1,7 @@
 import { useObjectStore } from '../../store/objectStore';
 import { useSimulatorStore } from '../../store/simulatorStore';
 
-export const ExportPanel = (): JSX.Element => {
+export const ExportPanel = () => {
   const objects = useObjectStore((s) => s.objects);
   const wind = useSimulatorStore((s) => s.wind);
 

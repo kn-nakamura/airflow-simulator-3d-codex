@@ -3,7 +3,7 @@ import type { ShapeType } from '../../types';
 
 const shapeList: ShapeType[] = ['box', 'sphere', 'cylinder', 'cone', 'torus'];
 
-export const ObjectPanel = (): JSX.Element => {
+export const ObjectPanel = () => {
   const { objects, selectedIds, addObject, select, removeSelected } = useObjectStore((s) => s);
 
   const add = (type: ShapeType): void => {

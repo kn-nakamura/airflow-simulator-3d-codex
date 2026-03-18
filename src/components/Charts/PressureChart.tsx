@@ -1,1 +1,1 @@
-export const PressureChart = (): JSX.Element => <></>;
+export const PressureChart = () => <></>;

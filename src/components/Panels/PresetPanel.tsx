@@ -1,6 +1,6 @@
 import { useObjectStore } from '../../store/objectStore';
 
-export const PresetPanel = (): JSX.Element => {
+export const PresetPanel = () => {
   const addObject = useObjectStore((s) => s.addObject);
 
   const loadBuilding = (): void => {

@@ -4,7 +4,7 @@ import { useFluidSolver } from './hooks/useFluidSolver';
 import { useObjectStore } from './store/objectStore';
 import { useSimulatorStore } from './store/simulatorStore';
 
-const App = (): JSX.Element => {
+const App = () => {
   const removeSelected = useObjectStore((s) => s.removeSelected);
   const running = useSimulatorStore((s) => s.running);
   const setRunning = useSimulatorStore((s) => s.setRunning);
