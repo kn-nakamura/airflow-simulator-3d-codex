@@ -1,6 +1,6 @@
 import { useSimulatorStore } from '../../store/simulatorStore';
 
-export const SimulationPanel = (): JSX.Element => {
+export const SimulationPanel = () => {
   const { running, setRunning } = useSimulatorStore((s) => s);
   return (
     <section className="rounded border border-border bg-card p-3 text-xs">

@@ -9,7 +9,7 @@ import { PressureHeatmap } from '../Visualizers/PressureHeatmap';
 import { ParticleStream } from '../Visualizers/ParticleStream';
 import { FpsCounter } from './FpsCounter';
 
-export const Viewport = (): JSX.Element => {
+export const Viewport = () => {
   const { showVelocity, showPressure, showParticles } = useUiStore((s) => s);
 
   return (

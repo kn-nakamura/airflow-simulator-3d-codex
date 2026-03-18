@@ -3,7 +3,7 @@ import { useMemo, useRef } from 'react';
 import { AdditiveBlending, DynamicDrawUsage, InstancedMesh, Matrix4, Object3D } from 'three';
 import { useSimulatorStore } from '../../store/simulatorStore';
 
-export const ParticleStream = ({ count = 1500 }: { count?: number }): JSX.Element => {
+export const ParticleStream = ({ count = 1500 }: { count?: number }) => {
   const meshRef = useRef<InstancedMesh>(null);
   const frame = useSimulatorStore((s) => s.solverFrame);
   const points = useMemo(

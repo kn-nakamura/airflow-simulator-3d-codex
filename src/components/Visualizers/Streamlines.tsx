@@ -1,1 +1,1 @@
-export const Streamlines = (): JSX.Element => <></>;
+export const Streamlines = () => <></>;

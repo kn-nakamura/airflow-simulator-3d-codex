@@ -3,7 +3,7 @@ import { useSimulatorStore } from '../../store/simulatorStore';
 import { ExportPanel } from '../Panels/ExportPanel';
 import { VelocityChart } from '../Charts/VelocityChart';
 
-export const InfoPanel = (): JSX.Element => {
+export const InfoPanel = () => {
   const frame = useSimulatorStore((s) => s.solverFrame);
   const metrics = computeMetrics(frame);
 
